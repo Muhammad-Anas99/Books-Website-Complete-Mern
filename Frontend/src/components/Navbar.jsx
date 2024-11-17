@@ -3,7 +3,6 @@ import { useState } from "react";
 import Login from "./Login";
 import { useAuth } from "../context/AuthProvider";
 import Logout from "./Logout";
-
 const Navbar = () => {
   const [authUser, setAuthUser] = useAuth();
   const [theme, setTheme] = useState(

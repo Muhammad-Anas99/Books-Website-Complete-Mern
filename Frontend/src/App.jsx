@@ -11,6 +11,9 @@ import { useAuth } from "./context/AuthProvider";
 
 const App = () => {
   const [authUser, setAuthUser] = useAuth();
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
+  console.log(backendUrl);
+
 
   return (
     <>

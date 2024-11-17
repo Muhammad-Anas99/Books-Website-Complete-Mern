@@ -19,7 +19,7 @@ const Signup = () => {
       password: data.password,
     };
     await axios
-      .post("http://localhost:4000/user/signup", userInfo)
+      .post(`http://localhost:4000/user/signup`, userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {
@@ -30,9 +30,10 @@ const Signup = () => {
         }, 2000);
       })
       .catch((error) => {
+        console.log(error.response);
         if (error.response) {
           console.log(error);
-          toast.error("ERROR: " + error.response.data);
+          toast.error("ERROR: " + error);
         }
       });
   };
